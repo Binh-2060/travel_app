@@ -43,10 +43,13 @@ class HomeScreen extends StatelessWidget {
               ),
               Container(
                 padding:
-                    const EdgeInsets.symmetric(horizontal: 25, vertical: 10),
+                    const EdgeInsets.symmetric(horizontal: 25, vertical: 15),
                 child: ElevatedButton(
                   onPressed: () {},
-                  child: Text('Block Button'),
+                  child: Text(
+                    'Sign in',
+                    style: TextStyle(fontSize: 16),
+                  ),
                   style: ElevatedButton.styleFrom(
                     minimumSize: Size(double.infinity, 48),
                     primary: Colors.blue,
@@ -54,6 +57,17 @@ class HomeScreen extends StatelessWidget {
                       borderRadius: BorderRadius.circular(24),
                     ),
                   ),
+                ),
+              ),
+              Container(
+                padding:
+                    const EdgeInsets.symmetric(horizontal: 25, vertical: 15),
+                alignment: Alignment.center,
+                child: const Text(
+                  "Create account ?",
+                  style: TextStyle(
+                      color: Colors.white,
+                      decoration: TextDecoration.underline),
                 ),
               )
             ],
