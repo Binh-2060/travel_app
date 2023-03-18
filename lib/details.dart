@@ -16,6 +16,7 @@ class _DetailsState extends State<Details> {
   Widget build(BuildContext context) {
     double height = MediaQuery.of(context).size.height;
     return Scaffold(
+      appBar: AppBar(),
       body: Stack(
         children: [
           Container(
@@ -39,15 +40,35 @@ class _DetailsState extends State<Details> {
                     padding: EdgeInsets.all(20.0),
                     child: ListView(
                       controller: scrollController,
-                      children: const [
-                        Text(
+                      children: [
+                        const Text(
                           'Maldives',
                           style: TextStyle(
                               fontSize: 20, fontWeight: FontWeight.w500),
                         ),
                         Padding(
-                          padding: EdgeInsets.symmetric(vertical: 4),
-                          child: StartRatings(ratings: 3),
+                          padding: const EdgeInsets.symmetric(vertical: 2),
+                          child: Row(
+                            children: const [
+                              StartRatings(ratings: 5),
+                              Text(
+                                "(3132 Reviews)",
+                                style: TextStyle(fontWeight: FontWeight.w300),
+                              )
+                            ],
+                          ),
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.only(top: 5),
+                          child: Row(
+                            children: const [
+                              Icon(
+                                Icons.location_on,
+                                color: Color(0xFF26BBA9),
+                              ),
+                              Text("Ban phonesavang , Chanthabuly, Vientaine")
+                            ],
+                          ),
                         )
                       ],
                     ),
