@@ -1,11 +1,18 @@
+// ignore_for_file: unused_label
+
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
+import 'package:travel_app/routes.dart';
+
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
+    routes:{
+     routes:routes;
+    }
     return Scaffold(
       body: Stack(
         children: [
@@ -46,7 +53,7 @@ class HomeScreen extends StatelessWidget {
                     const EdgeInsets.symmetric(horizontal: 25, vertical: 15),
                 child: ElevatedButton(
                   onPressed: () {
-                    Navigator.pushNamed(context, '/details');
+                    Navigator.of(context).pushNamed('/explore');
                   },
                   child: Text(
                     'Sign in',
