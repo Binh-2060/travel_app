@@ -53,7 +53,7 @@ class HomeScreen extends StatelessWidget {
                     const EdgeInsets.symmetric(horizontal: 25, vertical: 15),
                 child: ElevatedButton(
                   onPressed: () {
-                    Navigator.of(context).pushNamed('/explore');
+                  Navigator.of(context).pushNamed('/explore');  
                   },
                   child: Text(
                     'Sign in',
